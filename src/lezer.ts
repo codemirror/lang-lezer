@@ -1,5 +1,5 @@
 import {parser} from "lezer-lezer"
-import {LezerLanguage, foldNodeProp, LanguageSupport} from "@codemirror/language"
+import {LezerLanguage, foldNodeProp, foldInside, LanguageSupport} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
 
 /// A language provider based on the [Lezer Lezer
@@ -9,7 +9,7 @@ export const lezerLanguage = LezerLanguage.define({
   parser: parser.configure({
     props: [
       foldNodeProp.add({
-        "Body TokensBody SkipBody PrecedenceBody"(subtree) { return {from: subtree.from + 1, to: subtree.to - 1} }
+        "Body TokensBody SkipBody PrecedenceBody": foldInside
       }),
       styleTags({
         LineComment: t.lineComment,
