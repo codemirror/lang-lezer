@@ -28,7 +28,7 @@ export const lezerLanguage = LezerLanguage.define({
         "( )": t.paren,
         "[ ]": t.squareBracket,
         "{ }": t.brace,
-        "! ~ * + ? |": t.operator
+        '"!" ~ "*" + ? |': t.operator
       })
     ]
   }),
