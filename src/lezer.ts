@@ -1,11 +1,11 @@
 import {parser} from "@lezer/lezer"
-import {LezerLanguage, foldNodeProp, foldInside, LanguageSupport} from "@codemirror/language"
+import {LRLanguage, foldNodeProp, foldInside, LanguageSupport} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
 
 /// A language provider based on the [Lezer Lezer
 /// parser](https://github.com/lezer-parser/lezer-grammar), extended
 /// with highlighting and indentation information.
-export const lezerLanguage = LezerLanguage.define({
+export const lezerLanguage = LRLanguage.define({
   parser: parser.configure({
     props: [
       foldNodeProp.add({
