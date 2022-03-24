@@ -1,6 +1,5 @@
 import {parser} from "@lezer/lezer"
 import {LRLanguage, foldNodeProp, foldInside, LanguageSupport} from "@codemirror/language"
-import {styleTags, tags as t} from "@codemirror/highlight"
 
 /// A language provider based on the [Lezer Lezer
 /// parser](https://github.com/lezer-parser/lezer-grammar), extended
@@ -10,25 +9,6 @@ export const lezerLanguage = LRLanguage.define({
     props: [
       foldNodeProp.add({
         "Body TokensBody SkipBody PrecedenceBody": foldInside
-      }),
-      styleTags({
-        LineComment: t.lineComment,
-        BlockComment: t.blockComment,
-        AnyChar: t.character,
-        Literal: t.string,
-        "tokens from grammar as empty prop extend specialize": t.keyword,
-        "@top @left @right @cut @external": t.modifier,
-        "@precedence @tokens @context @dialects @skip @detectDelim @conflict": t.definitionKeyword,
-        "@extend @specialize": t.operatorKeyword,
-        "CharSet InvertedCharSet": t.regexp,
-        RuleName: t.variableName,
-        "RuleDeclaration/RuleName InlineRule/RuleName TokensBody/RuleName": t.definition(t.variableName),
-        PrecedenceName: t.labelName,
-        Name: t.name,
-        "( )": t.paren,
-        "[ ]": t.squareBracket,
-        "{ }": t.brace,
-        '"!" ~ "*" + ? |': t.operator
       })
     ]
   }),
