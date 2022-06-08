@@ -1,6 +1,6 @@
 {
   "name": "@codemirror/lang-lezer",
-  "version": "0.20.0",
+  "version": "6.0.0",
   "description": "Lezer grammar language support for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
@@ -26,10 +26,10 @@
   "sideEffects": false,
   "license": "MIT",
   "dependencies": {
-    "@codemirror/language": "^0.20.0",
-    "@codemirror/state": "^0.20.0",
-    "@lezer/lezer": "^0.16.0",
-    "@lezer/common": "^0.16.0"
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/state": "^6.0.0",
+    "@lezer/lezer": "^1.0.0",
+    "@lezer/common": "^1.0.0"
   },
   "devDependencies": {
     "@codemirror/buildhelper": "^0.1.0"
