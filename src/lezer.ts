@@ -5,6 +5,7 @@ import {LRLanguage, foldNodeProp, foldInside, LanguageSupport} from "@codemirror
 /// parser](https://github.com/lezer-parser/lezer-grammar), extended
 /// with highlighting and indentation information.
 export const lezerLanguage = LRLanguage.define({
+  name: "lezer",
   parser: parser.configure({
     props: [
       foldNodeProp.add({
