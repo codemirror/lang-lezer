@@ -2,7 +2,7 @@ import {parser} from "@lezer/lezer"
 import {LRLanguage, foldNodeProp, foldInside, LanguageSupport} from "@codemirror/language"
 
 /// A language provider based on the [Lezer Lezer
-/// parser](https://github.com/lezer-parser/lezer-grammar), extended
+/// parser](https://code.haverbeke.berlin/lezer/lezer-grammar), extended
 /// with highlighting and indentation information.
 export const lezerLanguage = LRLanguage.define({
   name: "lezer",
